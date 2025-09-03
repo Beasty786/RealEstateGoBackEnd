@@ -1,8 +1,8 @@
 package repository
 
 import (
-	"log"
 	"fmt"
+	"log"
 
 	"github.com/jmoiron/sqlx"
 	_ "github.com/lib/pq"
@@ -29,7 +29,7 @@ func NewRepository(db *sqlx.DB) *repository {
 }
 
 func ConnectToDB(database string) *sqlx.DB {
-	db, err := sqlx.Connect("postgres", fmt.Sprintf("user=test_user dbname=%s sslmode=disable", database))
+	db, err := sqlx.Connect("postgres", fmt.Sprintf("user=shameel password=#123^bak3nd dbname=%s sslmode=disable", database))
 	if err != nil {
 		log.Fatalln(err)
 	}
